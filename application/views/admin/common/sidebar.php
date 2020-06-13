@@ -8,11 +8,11 @@
                                 Dashboard
                             </a>
                             <a class="nav-link" href="<?php echo base_url();?>admin/core/site_setting"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ><div class="sb-nav-link-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
                                 Site setting
                             </a>
                             <a class="nav-link" href="<?php echo base_url();?>admin/core/social_links"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                ><div class="sb-nav-link-icon"><i class="fa fa-link" aria-hidden="true"></i></div>
                                 Social Links
                             </a>
                             <div class="sb-sidenav-menu-heading">All Pages</div>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="sb-sidenav-menu-heading">Management</div>
                             <a class="nav-link" href="charts.html"
-                                ><div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
+                                ><div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
                                 Users</a
                             >
                             <!-- <a class="nav-link" href="tables.html"
