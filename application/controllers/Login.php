@@ -25,9 +25,10 @@ class Login extends CI_Controller {
         $data['email'] = $this->input->post('email');
         $data['password'] = $this->input->post('password');
         $check =  $this->db_login->login_check($data);
-        if(isset($check))
+        if(!is_null($check))
         {
             $this->session->set_userdata("id",$check['user_id']);
+            // $_SESSION["id"] = $check['user_id'];
             $array = array(
                 'error'   => false,
                 'msg'     => base_url().'admin/dashboard',
