@@ -13,4 +13,4 @@ class Register extends CI_Controller {
 
 }
 
-/* End of file Register.php */
+/* End of file Register.php 

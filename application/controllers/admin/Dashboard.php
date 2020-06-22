@@ -11,9 +11,6 @@ class Dashboard extends CI_Controller {
             if(is_null($this->session->userdata("id"))){
                 redirect(base_url().'admin','refresh');
             }
-        $this->config->load('urls',true);
-        $data['url'] = $this->config->item('urls');
-        
     }
     
 
