@@ -10,6 +10,9 @@ class Register extends CI_Controller {
         $this->load->view('admin/register');
         
     }
+    public function insert(){
+        
+    }
 
 }
 
