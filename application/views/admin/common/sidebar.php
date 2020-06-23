@@ -25,8 +25,8 @@
                             <div class="collapse" id="collapseblog" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url();?>admin/blog/new_blog">New Post</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/">All Posts</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/">Categories</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/all_blog">All Posts</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/blog/cat_blog">Categories</a>
                             </nav>
                     
                             </div>
