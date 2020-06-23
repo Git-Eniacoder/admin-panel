@@ -30,19 +30,17 @@
                             </nav>
                     
                             </div>
-                            <div class="sb-sidenav-menu-heading">All Pages</div>
+                            <div class="sb-sidenav-menu-heading">Page Part</div>
                             
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Legal Pages
+                                Pages
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
                             <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="<?php echo base_url();?>admin/legal/terms">Terms & Condition</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/legal/privacy">Privacy Policy</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/legal/contact">Contact us</a>
-                                <a class="nav-link" href="<?php echo base_url();?>admin/legal/about">About us</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/pages/new_page">New Page</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/pages/all_page">All Pages</a>
                             </nav>
                     
                             </div>
