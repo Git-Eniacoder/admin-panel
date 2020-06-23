@@ -7,7 +7,7 @@
             <div class="col-md-10 border-right-1">
                <div class="form-group">
                <label for="">Heading</label>
-               <input type="text" class="form-control" name="" id="" placeholder="Heading" required>
+               <input type="text" class="form-control" name="" id="heading" placeholder="Heading" required>
                </div>
                <textarea name="about" id="textareaContent" required></textarea>
             </div>
@@ -19,6 +19,10 @@
                    <option>Web Development</option>
                    <option>App Development</option>
                  </select>
+               </div>
+               <div class="form-group">
+                 <label for="">Url Of Post</label>
+                 <input type="text" class="form-control" name="" id="permalink" placeholder="Permalink">
                </div>
                <div class="form-group">
                  <label for="">Meta Tags</label>
@@ -38,3 +42,11 @@ $(document).ready(function(){
     CKEDITOR.replace('textareaContent');
 });
     </script>
+<script>
+   $( "#heading" ).change(function() {
+     var get =  $("#heading").val();
+     get = get.replace(/ /g,"_");
+     get = get.substring(0, 30);
+     $("#permalink").val(get);
+   });
+</script>
