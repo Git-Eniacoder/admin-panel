@@ -47,10 +47,18 @@
                     
                             </div>
                             <div class="sb-sidenav-menu-heading">Management</div>
-                            <a class="nav-link" href="charts.html"
+                            
+                            <a class="nav-link collapsed" href="charts.html" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages"
                                 ><div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
-                                Users</a
-                            >
+                                Management
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="collapsePages2" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="<?php echo base_url();?>admin/Management/admin_management">Admin</a>
+                                <a class="nav-link" href="<?php echo base_url();?>admin/Management/user_management">User</a>
+                            </nav>
+                            </div>
                             <!-- <a class="nav-link" href="tables.html"
                                 ><div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Tables</a
