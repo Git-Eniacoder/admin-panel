@@ -25,6 +25,13 @@
                  <input type="text" class="form-control" name="" id="permalink" placeholder="Permalink">
                </div>
                <div class="form-group">
+                 <label for="">Featured Image</label>
+                 <input type="file" class="form-control-file" name="" id="imagepreview" placeholder="Feature Image" aria-describedby="fileHelpId">
+               </div>
+               <div style="width:10em" class="my-3">
+               <img id="blah" class="w-100" src="#" alt="your image" />
+              </div>
+               <div class="form-group">
                  <label for="">Meta Tags</label>
                  <textarea class="form-control" name="" id="" rows="3"></textarea>
                </div>
@@ -49,4 +56,21 @@ $(document).ready(function(){
      get = get.substring(0, 30);
      $("#permalink").val(get);
    });
+</script>
+<script>
+   function readURL(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+    
+    reader.onload = function(e) {
+      $('#blah').attr('src', e.target.result);
+    }
+    
+    reader.readAsDataURL(input.files[0]); // convert to base64 string
+  }
+}
+
+$("#imagepreview").change(function() {
+  readURL(this);
+});
 </script>
