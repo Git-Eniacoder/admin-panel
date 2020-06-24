@@ -11,15 +11,14 @@ class Db_login extends CI_Model {
 
     }
 
-    public function fetch(){
-        $data =  $this->db->get('admin_user')->row_array();
+    public function fetch($id){
+        $data =  $this->db->where('user_id',$id)->get('admin_user')->row_array();
           return $data ;
       }
 
-      public function update($id){
-        return $this->db->where('id',$id)->get('admin_user')->row_array();
+      public function insert_update($id,$data){
+        return $this->db->where('user_id',$id)->UPDATE('admin_user',$data);
     }
-
 }
 
 

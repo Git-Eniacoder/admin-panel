@@ -12,23 +12,40 @@ class Admin_management extends CI_Controller {
   
     }
 
-    public function index($data=null)
+    public function index()
     {
-        
-        $test['data'] = $this->db_login->fetch();
-
-        
-        $this->load->view('admin/common/header');
+        $id = $this->session->userdata("id");
+        $data['admin'] = $this->db_login->fetch($id);
+        $this->load->view('admin/common/header',$data);
         $this->load->view('admin/common/sidebar');
-        $this->load->view('admin/management/admin_management',$test);
+        $this->load->view('admin/management/admin_management',$data);
         $this->load->view('admin/common/footer');
     }
    
-    public function update($id){
-        $test['update'] =   $this->db_home->update($id);
+    public function insert_update(){
+        $this->form_validation->set_rules('name', 'Name', 'required');
+        $this->form_validation->set_rules('username', 'User Name', 'required');
+        $this->form_validation->set_rules('email', 'Email', 'required');
+        if($this->form_validation->run()){
+            
+           $data['user_name'] = $this->input->post('name');
+           $data['user_uname'] = $this->input->post('username');
+           $data['user_email'] = $this->input->post('email');
         
-   
+           if($this->db_login->insert_update($this->session->userdata("id"),$data)){
+            $this->session->set_flashdata('success','Update successfully');
+             redirect(base_url().'admin/Management/admin_management');
+           }
+           else{
+            $this->session->set_flashdata('error','Error in update');
+            redirect(base_url().'admin/');
+           } 
+        }
+       else
+       {
+        $this->session->set_flashdata('error','Error in update else part');
        }
+    } 
     
     
 
