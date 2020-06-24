@@ -17,7 +17,7 @@
                                         </thead>
                                         <tbody>
                                       <?php foreach($fetch as $value) {?>
-                                            <tr>
+                                            <tr id="hide<?php echo $value['page_id'] ; ?>">
                                               
                                                 <td><?php echo $value['page_name'] ; ?></td>
                                                 <td><?php echo $value['page_url'] ; ?></td>
@@ -25,7 +25,7 @@
                                                 <td><?php echo $value['date'] ; ?></td>
                                                 <td class="d-flex">
                                                     <a class="btn btn-success mx-1" href=""><i class="fa fa-edit" aria-hidden="true"></i></a>
-                                                    <a class="btn btn-danger mx-1" href="" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-trash" aria-hidden="true"></i></a>
+                                                    <a class="btn btn-danger mx-1 text-white del"data-value="<?php echo $value['page_id'] ; ?>"><i class="fa fa-trash" aria-hidden="true"></i></a>
                                                 </td>
                                             </tr>
                                           
@@ -38,21 +38,18 @@
         
    </div>
 </main>
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content border-0">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Are You Sure You Want To Delete</p>
-      </div>
-      <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel </button>
-          <button type="button" class="btn btn-danger">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
+<script type="text/javascript">
+
+$(".del").click(function(){
+    i=$(this).data("value");
+    console.log(i);
+  $.ajax({
+    url: "<?php echo base_url() ;?>admin/pages/all_page/delete/"+i, 
+    success: function(result){
+      console.log(result);  
+      if(result){
+        $("#hide"+i).fadeOut();
+      }
+  }});
+});
+</script>
