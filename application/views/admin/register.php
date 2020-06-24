@@ -23,10 +23,10 @@
                                         <form>
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputFirstName">First Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter first name" /></div>
+                                                    <div class="form-group"><label class="small mb-1" for="inputName">Name</label><input class="form-control py-4" id="inputName" type="text" placeholder="Enter name" /></div>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputLastName">Last Name</label><input class="form-control py-4" id="inputLastName" type="text" placeholder="Enter last name" /></div>
+                                                    <div class="form-group"><label class="small mb-1" for="inpuUsertName">User Name</label><input class="form-control py-4" id="inputUserName" type="text" placeholder="Enter user name" /></div>
                                                 </div>
                                             </div>
                                             <div class="form-group"><label class="small mb-1" for="inputEmailAddress">Email</label><input class="form-control py-4" id="inputEmailAddress" type="email" aria-describedby="emailHelp" placeholder="Enter email address" /></div>
