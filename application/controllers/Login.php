@@ -28,7 +28,7 @@ class Login extends CI_Controller {
         if(!is_null($check))
         {
             $this->session->set_userdata("id",$check['user_id']);
-            // $_SESSION["id"] = $check['user_id'];
+            $this->session->set_userdata("name",$check['user_name']);
             $array = array(
                 'error'   => false,
                 'msg'     => base_url().'admin/dashboard',
