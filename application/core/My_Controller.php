@@ -5,13 +5,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class My_Controller extends CI_Controller {
 
-    private $data;
     
-    public function __construct()
-    {
+    protected $data;
+    public function __construct(){
         parent::__construct();
-        $this->data['url'] = $this->config->load('urls',true);
-
+        $this->config->load("urls", true);
+        $this->data['url'] = $this->config->item("url");
     }
     
 

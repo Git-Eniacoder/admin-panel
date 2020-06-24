@@ -53,3 +53,18 @@ $route['default_controller'] = 'login';
 $route['admin'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+// ****************  Dynamic Pages ************* 
+
+
+// require( BASEPATH .'database\DB.php');
+// $db =& DB();
+// $result = $db->get('pages')->result_array();
+
+// foreach( $result as $list ){
+//    $route[$list['page_url']] = 'admin/legal/create_page/fetch_page/'.$list['page_id'];
+// }
+
+
+// ****************  Dynamic Pages ************* 

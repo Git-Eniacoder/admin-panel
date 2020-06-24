@@ -14,6 +14,7 @@ class Site_setting extends CI_Controller {
     }
     public function index()
     {
+       
         $this->load->view('admin/common/header');
         $this->load->view('admin/common/sidebar');
         $this->load->view('admin/core/site_setting');

@@ -54,7 +54,9 @@
   display: none !important;
 }
 
-
+.modal-header{
+  background-color: #f05b23;
+}
 
 
 

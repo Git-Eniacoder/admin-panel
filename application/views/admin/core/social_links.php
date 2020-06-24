@@ -21,15 +21,15 @@
                 <div class="card-box">
 
                  
-                   
+                   <form action="<?php echo  base_url().'admin/core/social_links/update_links/';?>" method="post">
                     <div class="form-group">
                       <label for="userName">Twitter handle</label>
-                      <input type="text" value="#" name="twitter_url" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" value="<?php echo $url['twitter_url']; ?>" name="twitter_url" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>Twitter handle or username</p>
                     </div>
                     <div class="form-group">
                       <label for="userName">Facebook page url</label>
-                      <input type="text" value="# " parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" value="<?php echo $url['facebook_url']; ?> " name="facebook_url" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>URL of your facebook page</p>
                     </div>
 
@@ -40,24 +40,24 @@
                     </div> -->
                     <div class="form-group">
                       <label for="userName">Youtube url</label>
-                      <input type="text" name="youtube_url" value="#" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" name="youtube_url" value="<?php echo $url['youtube_url']; ?> " parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>Your youtube channel url</p>
 
                     </div> 
 
                     <div class="form-group">
                       <label for="userName">Instagram url</label>
-                      <input type="text" name="instagram_url" value="#" parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" name="instagram_url" value="<?php echo $url['instagram_url']; ?> " parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>Your instagram page url</p>
                     </div>
                     <div class="form-group">
                       <label for="userName">Pinterest url</label>
-                      <input type="text" name="pinterest_url" value="#"  parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" name="pinterest_url" value="<?php echo $url['pinterest_url']; ?> "  parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>Your Pinterest page url</p>
                     </div>
                     <div class="form-group">
                       <label for="userName">Linked in url</label>
-                      <input type="text" name="linkedin_url" value="#"  parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
+                      <input type="text" name="linkedin_url" value="<?php echo $url['linkedin_url']; ?> "  parsley-trigger="change" maxlength="100" placeholder="" class="form-control" id="userName">
                       <p>Your LinkedIn account url</p>
                     </div>
 
@@ -69,7 +69,7 @@
                       </button>
 
                     </div>
-
+                  </form>
                   
                 </div>
               </div>

@@ -11,6 +11,8 @@ class Db_login extends CI_Model {
 
     }
 
+    // ADMIN-MANAGEMENT
+
     public function fetch($id){
         $data =  $this->db->where('user_id',$id)->get('admin_user')->row_array();
           return $data ;
@@ -19,6 +21,18 @@ class Db_login extends CI_Model {
       public function insert_update($id,$data){
         return $this->db->where('user_id',$id)->UPDATE('admin_user',$data);
     }
+
+    // SOCIAL-LINKS
+
+    public function fetch_links(){
+        $data =  $this->db->get('social_links')->row_array();
+          return $data ;
+      }
+
+       public function update_links($data){
+         return $this->db->UPDATE('social_links',$data);
+     }
+
 }
 
 

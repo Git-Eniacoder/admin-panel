@@ -29,12 +29,6 @@
             <div class="form-group">
             <label for="exampleFormControlInput1">New Password</label>
              <input type="password" class="form-control" name="new_password" placeholder="New Password">
-             <?php  
-               //  if($admin['user_pass']) == $_POST['old_password'] )
-               // {
-
-               // }
-               ?> 
             </div>
             <div class="form-group">
                <input type="submit" class="btn">
