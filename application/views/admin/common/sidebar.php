@@ -45,6 +45,7 @@
                     
                             </div>
                             <div class="sb-sidenav-menu-heading">Management</div>
+<<<<<<< HEAD
                             
                             <a class="nav-link collapsed" href="charts.html" data-toggle="collapse" data-target="#collapsePages2" aria-expanded="false" aria-controls="collapsePages"
                                 ><div class="sb-nav-link-icon"><i class="fa fa-users" aria-hidden="true"></i></div>
@@ -56,11 +57,14 @@
                                 <a class="nav-link" href="<?php echo base_url();?>admin/Management/admin_management">Admin</a>
                                 <a class="nav-link" href="<?php echo base_url();?>admin/Management/user_management">User</a>
                             <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages"
+=======
+                            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsers" aria-expanded="false" aria-controls="collapseUsers"
+>>>>>>> af736046c89433b066b2e5f1ecea0583e7c1ebd1
                                 ><div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
                                 Users
                                 <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
                             ></a>
-                            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+                            <div class="collapse" id="collapseUsers" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
                                 <a class="nav-link" href="<?php echo base_url();?>admin/users/all_user">All Users</a>
                                 <a class="nav-link" href="<?php echo base_url();?>admin/users/add_new">Add New</a>
