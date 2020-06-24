@@ -23,7 +23,7 @@
                                         <form>
                                             <div class="form-row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group"><label class="small mb-1" for="inputName">Name</label><input class="form-control py-4" id="inputFirstName" type="text" placeholder="Enter name" /></div>
+                                                    <div class="form-group"><label class="small mb-1" for="inputName">Name</label><input class="form-control py-4" id="inputName" type="text" placeholder="Enter name" /></div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group"><label class="small mb-1" for="inpuUsertName">User Name</label><input class="form-control py-4" id="inputUserName" type="text" placeholder="Enter user name" /></div>
