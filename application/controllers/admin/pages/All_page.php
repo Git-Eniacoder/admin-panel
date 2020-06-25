@@ -28,6 +28,7 @@ class ALl_page extends CI_Controller {
           echo false;
         }
     }
+    
 
 }
 
