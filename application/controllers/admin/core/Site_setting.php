@@ -28,20 +28,10 @@ class Site_setting extends CI_Controller {
             
         $data['site_title'] = $this->input->post('site_title');
         $data['site_desc'] = $this->input->post('site_desc');
-        $data['site_logo'] = $this->input->post('site_logo');
+        // $data['site_logo'] = $this->input->post('site_logo');
         $data['eg_select'] = $this->input->post('eg_select');
 
 
-        
-
- 
-    $filename = $_FILES["uploadfile"]["name"];
-    $tempname = $_FILES["uploadfile"]["tmp_name"];
-    $folder = "img/".$filename;
-    move_uploaded_file($tempname,$folder);
-    $data['site_logo'] = $folder;
-
-       
         if($this->db_login->update_site($data)){
           redirect(base_url().'admin/core/site_setting');
         }

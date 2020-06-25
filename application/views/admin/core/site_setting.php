@@ -32,7 +32,7 @@
                  <?php echo $site['eg_select']; ?>
                </textarea>
             </div>
-            <button type="button" class="btn btn-success">Update</button>
+            <button type="submit" class="btn btn-success">Update</button>
          </form>
       </div>
    </div>

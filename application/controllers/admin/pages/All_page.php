@@ -21,6 +21,14 @@ class ALl_page extends CI_Controller {
         $this->load->view('admin/pages/all_page',$data);
         $this->load->view('admin/common/footer');
     }
+    public function delete($id=null){
+        if($this->db_page->delete($id)){
+            echo true;
+        }else{
+          echo false;
+        }
+    }
+    
 
 }
 

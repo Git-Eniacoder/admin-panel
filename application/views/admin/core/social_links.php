@@ -64,9 +64,7 @@
 
 
                     <div class="form-group m-b-0">
-                      <button class="btn update" type="submit">
-                        Update
-                      </button>
+                      <button class="btn update" type="submit"> Update</button>
 
                     </div>
                   </form>
