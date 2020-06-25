@@ -10,31 +10,27 @@
          <li class="breadcrumb-item active">Site Setting</li>
       </ol>
       <div class="container">
-         <form>
+         <form action="<?php echo base_url().'admin/core/site_setting/update_site/';?>" method="post">
             <div class="form-group">
                <label for="exampleFormControlInput1">Site Title</label>
-               <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Site Title">
+               <input type="text" class="form-control" name="site_title" value="<?php echo $site['site_title']; ?>" id="exampleFormControlInput1" placeholder="Site Title">
                <div class="form-group">
                   <label for="exampleFormControlTextarea1">Site Description</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  <textarea class="form-control" name="site_desc"   id="exampleFormControlTextarea1" rows="3"><?php echo $site['site_desc']; ?></textarea>
                </div>
             </div>
             <div class="form-group">
               <label for="">Site Logo</label>
-              <input type="file" class="form-control-file" name="" id="imagepreview" placeholder="" aria-describedby="fileHelpId">
+              <input type="file" class="form-control-file"  name="site_logo"  id="imagepreview" placeholder="" aria-describedby="fileHelpId">
               <div style="width:10em" class="m-3">
-               <img id="blah" class="w-100" src="#" alt="your image" />
+               <img id="blah" class="w-100" src="<?php echo $site['site_logo']; ?>" alt="your image" >
               </div>
             </div>
             <div class="form-group">
-               <label for="exampleFormControlSelect1">Example select</label>
-               <select class="form-control" id="exampleFormControlSelect1">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-               </select>
+               <label for="exampleFormControlSelect">Example select</label>
+               <textarea class="form-control" name ="eg_select"  id="exampleFormControlTextarea1" rows="1">
+                 <?php echo $site['eg_select']; ?>
+               </textarea>
             </div>
             <button type="button" class="btn btn-success">Update</button>
          </form>
