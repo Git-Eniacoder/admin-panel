@@ -33,6 +33,17 @@ class Db_login extends CI_Model {
          return $this->db->UPDATE('social_links',$data);
      }
 
+    //  SITE SETTING
+
+    public function fetch_site(){
+        $data =  $this->db->get('site_setting')->row_array();
+          return $data ;
+      }
+
+       public function update_site($data){
+         return $this->db->UPDATE('site_setting',$data);
+     }
+
 }
 
 
