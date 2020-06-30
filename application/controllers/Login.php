@@ -52,7 +52,10 @@ class Login extends CI_Controller {
     } 
          echo json_encode($array);
     }
-
+    public function sess_destroy(){
+        $this->session->unset_userdata('id');
+        redirect('#', 'refresh');
+    }
 }
 
 /* End of file Login.php */

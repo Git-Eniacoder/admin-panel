@@ -11,7 +11,7 @@
                                 ><div class="sb-nav-link-icon"><i class="fa fa-cogs" aria-hidden="true"></i></div>
                                 Site setting
                             </a>
-                            <a class="nav-link" href="<?php echo base_url();?>admin/core/site_setting"
+                            <a class="nav-link" href="#"
                                 ><div class="sb-nav-link-icon"><i class="fa fa-image" aria-hidden="true"></i></div>
                                 Gallery
                             </a>
