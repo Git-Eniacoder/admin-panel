@@ -26,7 +26,6 @@ class Admin_management extends CI_Controller {
         $this->form_validation->set_rules('name', 'Name', 'required');
         $this->form_validation->set_rules('username', 'User Name', 'required');
         $this->form_validation->set_rules('email', 'Email', 'required');
-        $this->form_validation->set_rules('new_password', 'Password', 'required');
         if($this->form_validation->run()){
             
            $data['user_name'] = $this->input->post('name');
@@ -34,9 +33,10 @@ class Admin_management extends CI_Controller {
            $data['user_email'] = $this->input->post('email');
         //    $data['user_pass'] = $this->input->post('new_password');
 
+        if(is_null($this->input->post('new_password'))){
             $pass = $this->input->post('new_password');
             $data['user_pass'] = md5($pass);
-            
+            }
         
            if($this->db_login->insert_update($this->session->userdata("id"),$data)){
             $this->session->set_flashdata('success','Update successfully');
@@ -44,12 +44,13 @@ class Admin_management extends CI_Controller {
            }
            else{
             $this->session->set_flashdata('error','Error in update');
-            redirect(base_url().'admin/');
+            redirect(base_url().'admin/Management/admin_management');
            } 
         }
        else
        {
-        $this->session->set_flashdata('error','Error in update');
+        $this->session->set_flashdata('error','Please Fill All Fields');
+        redirect(base_url().'admin/Management/admin_management');
        }
     } 
     
